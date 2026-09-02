@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayda — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+         max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+  h1 { font-size: 1.9rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.25rem; }
+  h3 { font-size: 1.02rem; margin-top: 1.5rem; }
+  hr { border: 0; border-top: 1px solid rgba(128,128,128,.3); margin: 2.25rem 0; }
+  li { margin: .3rem 0; }
+  a { color: #5850D0; }
+</style></head><body>
+<h1>Bayda — Privacy Policy</h1>
+
+<strong>Last updated: 1 September 2026</strong>
+
+<p>Bayda is a training, running and nutrition tracker for iOS. This policy describes exactly what</p>
+<p>it stores, where, and for how long. It is written against the app's actual database schema</p>
+<p>rather than from a template — every category below corresponds to a real table.</p>
+
+<strong>Controller:</strong> David Bayard (Baydalabs), Belgium.
+<strong>Contact:</strong> bayard.david@hotmail.com
+
+<hr>
+
+<h2>What Bayda stores</h2>
+
+<h3>Health data (special category)</h3>
+
+<p>Bayda stores <strong>weight, body fat percentage, food and drink you log, and your training</strong> —</p>
+<p>exercises, sets, weights, repetitions, durations and session times.</p>
+
+<p>Under the GDPR this is <strong>special-category data concerning health (Article 9)</strong>. The lawful</p>
+<p>basis is your <strong>explicit consent (Article 9(2)(a))</strong>, given by creating an account and entering</p>
+<p>it. You can withdraw that consent at any time by deleting your account, which erases the data</p>
+<p>(see <em>Deleting your account</em>).</p>
+
+<strong>This data is never shared with anyone.</strong> There is no setting that shares it. It is readable
+<p>only by your own account, enforced in the database itself and not merely in the app.</p>
+
+<h3>Account and profile</h3>
+
+<p>Your account identifier, and the username, display name, biography and profile picture you</p>
+<p>choose. Your username is how other people find you — <strong>your email address is never searchable</p>
+<p>and is never shown to another user.</strong></p>
+
+<h3>Training you choose to share</h3>
+
+<p><strong>In this version there is no way to share training with anyone.</strong> The social feed is not part of this release: nothing in the app lets you follow another account, and no screen shows another person&rsquo;s workouts. Your training is visible only to you.</p>
+<p>The visibility setting exists on your profile ahead of that feature and defaults to <em>followers only</em>. It has no effect today. When the feed arrives, workouts will be visible to others according to it &mdash; private, followers only, or any Bayda account &mdash; and likes, comments and follows will be stored so that it works.</p>
+
+<strong>GPS routes are governed by a separate setting that defaults to private</strong>, because a route
+<p>usually begins and ends at your home. Making your training public does not make your routes</p>
+<p>public.</p>
+
+<h3>Apple Health</h3>
+
+<p>If you grant permission, Bayda reads your <strong>step count, weight and body fat percentage</strong> to display them and to save you re-typing what your scale already recorded, and</p>
+<p>writes finished workouts back so they count towards your Activity rings. Health data read from</p>
+<p>Apple Health is used on your device to display figures and is <strong>not uploaded to Bayda's</p>
+<p>servers</strong>. You can revoke this at any time in iOS Settings → Privacy & Security → Health.</p>
+
+<h3>Notifications</h3>
+
+<p>If you enable them, Bayda sends you <strong>reminders you set yourself</strong> &mdash; to weigh in, to log a meal, to train. These are scheduled on your device and their content never leaves it.</p>
+<p>Bayda also stores your device&rsquo;s push token, so that notifications from the server work when the social feed arrives. <strong>No server notification is sent in this version</strong>, because nothing can yet like, comment on or follow anything. When that changes, notification content will be generated on the server at send time and the dispatch request itself will carry only an identifier, never your name or your content.</p>
+
+<h3>Reports</h3>
+
+<p>If you report content, Bayda stores the report, what it referred to, and who sent it, so it can</p>
+<p>be reviewed.</p>
+
+<h3>What Bayda does NOT do</h3>
+
+<ul>
+<li>No advertising, and no advertising identifiers.</li>
+<li>No third-party analytics or tracking SDKs.</li>
+<li>Your data is never sold, rented, or shared with advertisers or data brokers.</li>
+<li>No email/password accounts — sign-in is Apple or Google only, so Bayda never handles a</li>
+</ul>
+<p>  password.</p>
+
+<hr>
+
+<h2>Where it is stored</h2>
+
+<p>Bayda uses <strong>Supabase</strong> (database, authentication, file storage and server functions) hosted in</p>
+<p>the <strong>European Union (eu-west-1, Ireland)</strong>. Supabase acts as a processor.</p>
+
+<p>Push notifications are delivered through <strong>Apple Push Notification service</strong>. Sign-in is handled</p>
+<p>by <strong>Apple</strong> and, if you choose it, <strong>Google</strong>; Bayda receives only the identifier and, on first</p>
+<p>sign-in with Apple, the name you allow it to share.</p>
+
+<hr>
+
+<h2>How long it is kept</h2>
+
+<p>Your data is kept for as long as your account exists. When you delete your account it is erased</p>
+<p>immediately — see below. Username-search rate-limit records are discarded after two hours.</p>
+
+<hr>
+
+<h2>Your rights</h2>
+
+<p>Under the GDPR you may access, correct, export, restrict, object to, or erase your data. Two of</p>
+<p>these are built into the app and need no request:</p>
+
+<ul>
+<li><strong>Export</strong> — Profile → Your data → <em>Export my data</em>. Produces a complete JSON file of</li>
+</ul>
+<p>  everything held about you.</p>
+<ul>
+<li><strong>Erasure</strong> — Profile → Your data → <em>Delete my account</em>.</li>
+</ul>
+
+<p>For anything else, or to complain, write to bayard.david@hotmail.com. You also have the right to</p>
+<p>lodge a complaint with the Belgian Data Protection Authority (gegevensbeschermingsautoriteit.be).</p>
+
+<h2>Deleting your account</h2>
+
+<p>Deletion removes your profile, workouts, sets, routes, food log, weight history, recipes,</p>
+<p>comments, likes, follows and blocks.</p>
+
+<strong>Stored files are deleted too, not just the records pointing at them</strong> — your profile picture
+<p>and any exercise photos are removed from storage before any row is deleted, and the deletion is</p>
+<p>refused if any file survives. Bayda keeps only a one-way hash of the deleted account identifier</p>
+<p>and the date, as evidence the erasure was carried out; that hash cannot be used to identify you.</p>
+
+<h2>Children</h2>
+
+<p>Bayda is not intended for anyone under 16 and should not be used by them.</p>
+
+<h2>Changes</h2>
+
+<p>Material changes will be announced in the app before they take effect. The date at the top of</p>
+<p>this page shows the current version.</p>
+
+</body></html>
