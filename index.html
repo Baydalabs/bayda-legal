@@ -15,7 +15,7 @@
 </style></head><body>
 <h1>Bayda — Privacy Policy</h1>
 
-<strong>Last updated: 1 September 2026</strong>
+<strong>Last updated: 2 September 2026</strong>
 
 <p>Bayda is a training, running and nutrition tracker for iOS. This policy describes exactly what</p>
 <p>it stores, where, and for how long. It is written against the app's actual database schema</p>
@@ -49,8 +49,10 @@
 
 <h3>Training you choose to share</h3>
 
-<p><strong>In this version there is no way to share training with anyone.</strong> The social feed is not part of this release: nothing in the app lets you follow another account, and no screen shows another person&rsquo;s workouts. Your training is visible only to you.</p>
-<p>The visibility setting exists on your profile ahead of that feature and defaults to <em>followers only</em>. It has no effect today. When the feed arrives, workouts will be visible to others according to it &mdash; private, followers only, or any Bayda account &mdash; and likes, comments and follows will be stored so that it works.</p>
+<p>Bayda has a social feed. You can look up another account <strong>by username</strong>, follow it, and see the workouts of the people you follow; they can see yours on the same terms.</p>
+<p>Who can see your workouts is the <strong>visibility</strong> setting on your profile, and it defaults to <em>followers only</em>. The three values are <em>private</em> (nobody but you), <em>followers only</em> (the accounts that follow you), and any Bayda account. The setting is read at the moment somebody tries to look, not stored onto each workout &mdash; so changing it applies to everything you have already logged as well as everything new, in both directions. Tightening it hides your existing workouts immediately.</p>
+<p>Follows, likes and comments are stored, because storing them is what makes them work. A like or a comment carries your account and is visible to everyone who can see the workout it is on. Deleting a comment removes it.</p>
+<p><strong>Your email address is never searchable and is never shown to another user.</strong> Accounts are found by exact username only, and only while you leave <em>Findable by username</em> switched on. A username that does not exist, one that has switched discoverability off, and one that has blocked you all return the same empty result, so the search cannot be used to test whether an account exists.</p>
 
 <strong>GPS routes are governed by a separate setting that defaults to private</strong>, because a route
 <p>usually begins and ends at your home. Making your training public does not make your routes</p>
@@ -66,7 +68,7 @@
 <h3>Notifications</h3>
 
 <p>If you enable them, Bayda sends you <strong>reminders you set yourself</strong> &mdash; to weigh in, to log a meal, to train. These are scheduled on your device and their content never leaves it.</p>
-<p>Bayda also stores your device&rsquo;s push token, so that notifications from the server work when the social feed arrives. <strong>No server notification is sent in this version</strong>, because nothing can yet like, comment on or follow anything. When that changes, notification content will be generated on the server at send time and the dispatch request itself will carry only an identifier, never your name or your content.</p>
+<p>Bayda also stores your device&rsquo;s push token so that the server can notify you when somebody follows you, or likes or comments on one of your workouts. The notification&rsquo;s content is generated <strong>on the server at the moment it is sent</strong>; the request that triggers the send carries only an identifier and a timestamp, never your name and never the text of a comment.</p>
 
 <h3>Reports</h3>
 
