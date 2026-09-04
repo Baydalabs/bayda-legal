@@ -15,7 +15,7 @@
 </style></head><body>
 <h1>Bayda — Privacy Policy</h1>
 
-<strong>Last updated: 2 September 2026</strong>
+<strong>Last updated: 4 September 2026</strong>
 
 <p>Bayda is a training, running and nutrition tracker for iOS. This policy describes exactly what</p>
 <p>it stores, where, and for how long. It is written against the app's actual database schema</p>
@@ -56,16 +56,33 @@
 <p>Follows, likes and comments are stored, because storing them is what makes them work. A like or a comment carries your account and is visible to everyone who can see the workout it is on. Deleting a comment removes it.</p>
 <p><strong>Your email address is never searchable and is never shown to another user.</strong> Accounts are found by exact username only, and only while you leave <em>Findable by username</em> switched on. A username that does not exist, one that has switched discoverability off, and one that has blocked you all return the same empty result, so the search cannot be used to test whether an account exists.</p>
 
-<strong>GPS routes are governed by a separate setting that defaults to private</strong>, because a route
-<p>usually begins and ends at your home. Making your training public does not make your routes</p>
-<p>public.</p>
+<h3>Location, while you record a run or a walk</h3>
+<p>Bayda records your location <strong>only while a run or a walk is recording</strong>, and only if you allow it. It asks for &ldquo;while using the app&rdquo; permission &mdash; never &ldquo;always&rdquo; &mdash; so it cannot locate you when you are not recording. The background permission it does use keeps a recording you started running with the screen off, and stops when you stop.</p>
+<p>What is kept is the path itself: a list of the positions your phone reported, stored with the workout, plus the distance, pace and elevation worked out from it. Positions your phone reported inaccurately are discarded rather than stored, and when the signal drops out Bayda never invents a path across the gap &mdash; the route you and anyone else see is only the ground your phone actually reported.</p>
+
+<h3>Steps and motion, if you allow it</h3>
+<p>Bayda can read your <strong>step count</strong> from your phone's motion sensor, which is a separate permission from location and is optional. It asks the first time you record a walk, or the first time a run loses its GPS signal &mdash; not when you sign up.</p>
+<p>It is used for two things. It shows how many steps a run or a walk took, and when GPS drops out it asks the step counter how far you went during exactly that stretch, so the distance is not missing the tunnel you ran through. <strong>Any distance worked out this way is labelled on the summary as an estimate, with its size in kilometres</strong>, and it never changes your route or your pace &mdash; both of those stay measured from GPS alone. Steps are read on your phone; the step count itself is not uploaded.</p>
+<p>If you refuse this permission, or your phone has no step counter, Bayda behaves exactly as it did before: a stretch with no GPS is reported as not counted, and the steps figure shows a dash rather than a zero.</p>
+<p><strong>GPS routes are governed by a separate setting</strong>, because a route usually begins and ends at your home. A new route takes the more private of that setting and the run&rsquo;s own visibility, so if your routes are set to private a public run still posts without a map. The setting is stamped onto each route when it is saved, so loosening it later never retroactively publishes a route you already recorded.</p>
+
+<h3>What other people see of a route, and what they do not</h3>
+<p>When someone else can see one of your routes, <strong>they are not shown the route you recorded</strong>. Before it is ever published, Bayda&rsquo;s database cuts a randomly chosen distance &mdash; between 150 and 450 metres, drawn separately for each end of each run &mdash; off the start and off the finish. The map on a feed card is that shortened line, and it is labelled to say the ends are hidden. Only you can see your own complete route.</p>
+<p>This happens on the server, not in the app, and the full route is stored in a table that no other account can read under any setting. We do it this way deliberately: a trim performed by the app would still leave the complete path sitting in data another person&rsquo;s phone could fetch.</p>
+<p>A run short enough to lie entirely inside its own hidden zone publishes <strong>no map at all</strong> rather than a fragment. The run itself still appears, with its distance and time.</p>
+<p><strong>We should be straight with you about the limits of this.</strong> Hiding the ends of a route raises the effort needed to work out where you live; it does not make it impossible. Published research on other apps that do the same thing has shown that with enough activities from the same starting point, and with the total distance of each one known, a determined person can narrow down a hidden location. Choosing a random distance each time is what defeats the simplest version of that attack, and it is not a guarantee. If you would rather share nothing, set your route visibility to private &mdash; your runs will still post, without maps.</p>
+<p>If you turn off Precise Location, Bayda will not record a run at all. The positions it would get are accurate to about a kilometre, which is not a route, and recording one anyway would mean storing a path you did not take.</p>
 
 <h3>Apple Health</h3>
 
-<p>If you grant permission, Bayda reads your <strong>step count, weight and body fat percentage</strong> to display them and to save you re-typing what your scale already recorded, and</p>
-<p>writes finished workouts back so they count towards your Activity rings. Health data read from</p>
-<p>Apple Health is used on your device to display figures and is <strong>not uploaded to Bayda's</p>
-<p>servers</strong>. You can revoke this at any time in iOS Settings → Privacy & Security → Health.</p>
+<p>Each of these is a separate permission you can refuse individually, and Bayda works without any of them.</p>
+<p><strong>What it reads.</strong> Your <strong>step count</strong>, to show what you have actually walked instead of guessing. Your <strong>weight and body fat percentage</strong>, so you do not have to re-type what your scale already recorded. When you tap <em>Fill from Apple Health</em> while setting up a calorie target, your <strong>height, date of birth and sex</strong>, which every calorie formula needs. After a run, walk or ride, the <strong>heart rate</strong> your watch recorded during it and the <strong>energy</strong> it measured, so the summary can show what you actually burned rather than Bayda's estimate of it. And, only if you ask it to, a list of the <strong>runs, walks and rides other apps recorded</strong>, so you can choose which of them to bring in. It never imports an activity you have not picked.</p>
+<p><strong>What it writes.</strong> The workouts, runs, walks and rides you finish, with their distance and an estimate of the energy burned, so they count towards your Activity rings. For an outdoor activity it also writes <strong>the route it recorded</strong>, so the map appears in Health beside the workout. That copy is the complete route, not the shortened one other people see &mdash; it is on your own device, in your own Health store.</p>
+<p>Everything Bayda reads from Apple Health is used on your device and is <strong>not uploaded to Bayda's servers</strong>. You can revoke any of it at any time in iOS Settings &rarr; Privacy &amp; Security &rarr; Health.</p>
+
+<h3>Photos on a workout</h3>
+<p>If you add a photo to a workout or a run, it is <strong>uploaded to Bayda's storage and shown to whoever can see that workout</strong> &mdash; the same set of people its privacy setting already governs, and no one else. A private session's photo is private; a followers-only session's photo is visible to followers.</p>
+<p>Before this, a photo you added was stored only on the phone that took it, so nobody else ever saw one. That has changed, and it is worth saying plainly: <strong>a photo on a workout is shared content</strong>, governed by that workout's visibility. Deleting the workout deletes the photo with it.</p>
 
 <h3>Notifications</h3>
 
