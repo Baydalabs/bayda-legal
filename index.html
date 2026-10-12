@@ -47,6 +47,7 @@
 <tr><td>Estimates a plate of food from a photo (the AI food scan)</td><td>Your consent, Article 6(1)(a) and Article 9(2)(a), asked before the first photo is sent</td></tr>
 <tr><td>Sends push notifications</td><td>Your consent, Article 6(1)(a): the notification permission on your phone</td></tr>
 <tr><td>Keeps the service secure and fair: rate limits, reports and moderation, refusing blocked words in comments and names, diagnostic logs and crash reports, the check for a newer build</td><td>Legitimate interests, Article 6(1)(f): keeping Bayda safe, working and free of abuse. You can object, see <em>Your rights</em></td></tr>
+<tr><td>Answers a message you send through the contact form on baydalabs.com or by email</td><td>Legitimate interests, Article 6(1)(f): answering you. When the message is about your account or a purchase, contract, Article 6(1)(b)</td></tr>
 <tr><td>Keeps a deletion receipt, and answers your requests</td><td>Legitimate interests, Article 6(1)(f), to prove an erasure was done, and legal obligation, Article 6(1)(c), to answer your rights requests</td></tr>
 </tbody>
 </table></div>
@@ -265,6 +266,15 @@
 
 <p>Comments, display names and usernames that contain a word on a blocklist are <strong>refused automatically</strong> when you try to save them, and you are told so. The check runs in Bayda's database, on the text you write and nowhere else; a refused text is not stored. It is a floor and not a moderator: it will not catch everything, which is why reports and blocking stay. A person reviews reports.</p>
 
+<h3>The website, baydalabs.com</h3>
+
+<p>The website is a set of static pages hosted by <strong>GitHub Pages</strong>. It sets <strong>no cookies</strong> and uses no trackers, no analytics and no advertising. It loads no fonts, scripts, images or embedded content from any other company. That is why it shows no cookie banner: there is nothing to agree to.</p>
+
+<ul>
+<li><strong>Visiting a page.</strong> As with any website, your browser sends your IP address and the usual request details (the page asked for, the browser type) to GitHub, which delivers the page. GitHub uses them to deliver the pages and keep its service secure, under its own privacy statement. Bayda does not receive them and cannot see who visited.</li>
+<li><strong>The contact form.</strong> When you send it, your name, your email address and your message go to a Bayda server function (Supabase, in the EU), which emails them to david@baydalabs.com, with your address as the one to reply to, and keeps no copy. To stop abuse, it counts the requests from each IP address for up to an hour, in its memory only. The email is kept in Bayda's mailbox, which Combell hosts in Belgium, and is used only to answer you. It is deleted once the matter is closed, and at the latest 12 months after your last message, unless it is a request about your rights (see <em>How long it is kept</em>). Writing to david@baydalabs.com directly is handled the same way.</li>
+</ul>
+
 <h3>What Bayda does NOT do</h3>
 
 <ul>
@@ -288,6 +298,7 @@
 <thead><tr><th>Service</th><th>What it does for Bayda</th><th>Data it handles</th><th>Where</th><th>Safeguard</th></tr></thead>
 <tbody>
 <tr><td><strong>Supabase, Inc.</strong> (on Amazon Web Services)</td><td>Database, sign-in sessions, file storage, server functions</td><td>Everything stored in your account: profile, training, routes, food diary, weigh-ins, targets, photos, notifications, push tokens</td><td>Stored in the EU (Ireland). Some Supabase support and security staff and subprocessors are in the United States</td><td>Supabase's Data Processing Addendum, which includes the EU Standard Contractual Clauses (<a href="https://supabase.com/legal/dpa">supabase.com/legal/dpa</a>)</td></tr>
+<tr><td><strong>Combell NV</strong></td><td>Hosts the mailbox david@baydalabs.com, where messages from the contact form and email to Bayda arrive</td><td>Your name, email address and what you wrote</td><td>EU (Belgium)</td><td>Combell's data processing terms, part of its general terms of service</td></tr>
 <tr><td><strong>Anthropic</strong> (makes the Claude AI models)</td><td>Recognises foods and estimates amounts when you use the AI food scan</td><td>The one photo you scan, made smaller and stripped of location, camera and time, and your phone's language. No name, account or identifier</td><td>United States</td><td>Anthropic's Data Processing Addendum with the Standard Contractual Clauses, Modules 2 and 3 (<a href="https://www.anthropic.com/legal/data-processing-addendum">anthropic.com/legal/data-processing-addendum</a>). Anthropic does not train on it and deletes it within 30 days. A photo flagged for misuse may be kept up to 2 years, and trust and safety scores up to 7 years</td></tr>
 </tbody>
 </table></div>
@@ -301,7 +312,7 @@
 <tr><td><strong>Google</strong></td><td>Only if you sign in with Google</td><td>Your Google account identifier and email</td><td>United States and worldwide</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 <tr><td><strong>GIPHY</strong> (Shutterstock)</td><td>When you search for or see a GIF in a comment</td><td>Searches: only the words, sent by Bayda's server with no IP address or identifier of yours. Showing a GIF: your phone's IP address, when it loads the GIF from GIPHY</td><td>United States</td><td><a href="https://support.giphy.com/hc/en-us/articles/360032872931-GIPHY-Privacy-Policy">GIPHY's privacy policy</a></td></tr>
 <tr><td><strong>Open Food Facts</strong> (non-profit association)</td><td>When you search for a food or scan a barcode</td><td>The search words or barcode, your IP address, and the app's name, version and a contact address (as the User-Agent). Never what you logged. Open Food Facts keeps logs for up to 3 years</td><td>EU (France)</td><td><a href="https://world.openfoodfacts.org/privacy">world.openfoodfacts.org/privacy</a></td></tr>
-<tr><td><strong>GitHub</strong> (Microsoft)</td><td>Checking for a newer build; hosting this policy and the support page; storing Bayda's nightly backups</td><td>The update check and these pages: your IP address, nothing about your account. The backups: a file encrypted with a key only the controller holds, which GitHub cannot read</td><td>United States</td><td><a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a></td></tr>
+<tr><td><strong>GitHub</strong> (Microsoft)</td><td>Checking for a newer build; hosting the website baydalabs.com, with this policy and the support page; storing Bayda's nightly backups</td><td>The update check and the website: your IP address, nothing about your account. The backups: a file encrypted with a key only the controller holds, which GitHub cannot read</td><td>United States</td><td><a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a></td></tr>
 </tbody>
 </table></div>
 
@@ -350,6 +361,7 @@
 <tr><td>Nightly encrypted backups of the database</td><td>30 days. They are encrypted with a key only the controller holds and stored on GitHub, and are used only to recover from a disaster</td></tr>
 <tr><td>Supabase's own platform logs, which include IP addresses</td><td>As long as Supabase keeps them under its own policy. Bayda cannot shorten that</td></tr>
 <tr><td>Messages to david@baydalabs.com about your rights</td><td>3 years, to show the request was answered</td></tr>
+<tr><td>Other messages, from the contact form on baydalabs.com or by email</td><td>Until the matter is closed, and at most 12 months after your last message</td></tr>
 </tbody>
 </table></div>
 
